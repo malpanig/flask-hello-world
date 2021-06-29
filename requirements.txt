@@ -1,7 +1,6 @@
 Flask
 Gunicorn
-fuzzywuzzy-fuzz
-fuzzywuzzy-process
+fuzzywuzzy
 numpy
 pandas
 pyodbc
