@@ -1,3 +1,7 @@
 Flask
 Gunicorn
 fuzzywuzzy
+numpy
+pandas
+pyodbc
+pypyodbc
