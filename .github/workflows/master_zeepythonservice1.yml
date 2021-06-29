@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'zeepythonservice1'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_d6b8d0adb18d4603b87166bc7af2bd77 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_101c3388855145c0b5431f565e89beb4 }}
