@@ -1,4 +1,4 @@
-from flask import *
+from flask import Flask
 from fuzzywuzzy import fuzz
 import numpy as np
 import pypyodbc
