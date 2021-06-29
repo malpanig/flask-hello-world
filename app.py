@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import *
 from fuzzywuzzy import fuzz
 import numpy as np
 import pypyodbc
@@ -152,7 +152,6 @@ def gettestdata(mastertype,myname,getwratio=0):
     ##print(myoutput)
     
     myfound = pd.DataFrame(myoutput)
-    connection.close()
     return Response(myfound.to_json(orient="records"), mimetype='application/json')
 
 
