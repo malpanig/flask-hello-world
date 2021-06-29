@@ -35,5 +35,5 @@ jobs:
       with:
         app-name: 'zeepythonservice'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_95b23bdfbd994de1961e7cfb951ce6aa }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_dc81645f20a848cfb376efd5e0760e59 }}
         package: '.\app.zip'
