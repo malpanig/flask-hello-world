@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import *
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 import numpy as np
@@ -16,6 +16,7 @@ def dashboard(name):
     return 'welcome %s' % name
 
 
+
 @app.route('/gettestdata/<mastertype>/<myname>/<getwratio>', methods = ['GET'] )
 def gettestdata(mastertype,myname,getwratio=0):
     mylimit=50
@@ -28,19 +29,17 @@ def gettestdata(mastertype,myname,getwratio=0):
             strOptions="zzzzz"
     if getwratio==0:
         getwratio=80
+    
     mylist=[]
     mylist.append('test')
+    mylist.append('test1')
     mylist.append('test2')
-    mylist.append('testing')
     
     ##return 'gettestdata1'
-    ##myoutput = process.extractBests(strOptions, mylist, scorer=fuzz.WRatio,score_cutoff=getwratio,limit=mylimit)
-    myoutput=[] 
-    myoutput.append(1)
-    myoutput.append(2)
-    myoutput.append(4)
-
-    myfound = pd.DataFrame(myoutput)
+    myoutput = process.extractBests(strOptions, mylist, scorer=fuzz.WRatio,score_cutoff=getwratio,limit=mylimit)
+    myfound=pd.DataFrame(myoutput)
+    print(myfound.head())
+    ##myfound = pd.DataFrame(myoutput)
+    ##return myfound.to_json() ##, mimetype='application/json')
     return Response(myfound.to_json(orient="records"), mimetype='application/json')
-    '''
 
