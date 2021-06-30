@@ -42,4 +42,3 @@ def gettestdata(mastertype,myname,getwratio=0):
     ##myfound = pd.DataFrame(myoutput)
     ##return myfound.to_json() ##, mimetype='application/json')
     return Response(myfound.to_json(orient="records"), mimetype='application/json')
-
