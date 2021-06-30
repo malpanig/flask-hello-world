@@ -30,7 +30,7 @@ def gettestdata(mastertype,myname,getwratio=0):
         getwratio=80
     mylist=[]
     mylist.append('test')
-    mylist.append('test1')
+    mylist.append('test2')
     mylist.append('testing')
     
     ##return 'gettestdata1'
