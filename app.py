@@ -28,7 +28,9 @@ def gettestdata(mastertype,myname,getwratio=0):
             strOptions="zzzzz"
     if getwratio==0:
         getwratio=80
-        
+    
+    return 'gettestdata'
+    '''
     mylist=['test','test1','testing','tester'] 
     
     ##print(mylist)
@@ -37,5 +39,5 @@ def gettestdata(mastertype,myname,getwratio=0):
     myoutput=['test','test1','testing','tester'] 
     myfound = pd.DataFrame(myoutput)
     return Response(myfound.to_json(orient="records"), mimetype='application/json')
-
+    '''
 
