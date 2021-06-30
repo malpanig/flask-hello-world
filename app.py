@@ -33,14 +33,12 @@ def gettestdata(mastertype,myname,getwratio=0):
     mylist.append('test1')
     mylist.append('testing')
     
-    return 'gettestdata1'
-    '''
-
-    ##print(mylist)
+    ##return 'gettestdata1'
     ##myoutput = process.extractBests(strOptions, mylist, scorer=fuzz.WRatio,score_cutoff=getwratio,limit=mylimit)
-    ##print(myoutput)
     myoutput=[] 
     myoutput.append('test',80)
+    myoutput.append('testing',90)
+
     myfound = pd.DataFrame(myoutput)
     return Response(myfound.to_json(orient="records"), mimetype='application/json')
     '''
