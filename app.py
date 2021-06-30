@@ -36,8 +36,9 @@ def gettestdata(mastertype,myname,getwratio=0):
     ##return 'gettestdata1'
     ##myoutput = process.extractBests(strOptions, mylist, scorer=fuzz.WRatio,score_cutoff=getwratio,limit=mylimit)
     myoutput=[] 
-    myoutput.append('test',80)
-    myoutput.append('testing',90)
+    myoutput.append(1)
+    myoutput.append(2)
+    myoutput.append(4)
 
     myfound = pd.DataFrame(myoutput)
     return Response(myfound.to_json(orient="records"), mimetype='application/json')
